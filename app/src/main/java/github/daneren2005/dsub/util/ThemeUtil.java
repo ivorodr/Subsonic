@@ -26,6 +26,7 @@ import github.daneren2005.dsub.activity.SettingsActivity;
 import github.daneren2005.dsub.activity.SubsonicFragmentActivity;
 
 public final class ThemeUtil {
+	public static final String THEME_AUDINAUT = "audinaut";
 	public static final String THEME_DARK = "dark";
 	public static final String THEME_BLACK = "black";
 	public static final String THEME_LIGHT = "light";
@@ -61,7 +62,9 @@ public final class ThemeUtil {
 	public static int getThemeRes(Context context, String theme) {
 		if(context instanceof SubsonicFragmentActivity || context instanceof SettingsActivity) {
 			if(Util.getPreferences(context).getBoolean(Constants.PREFERENCES_KEY_COLOR_ACTION_BAR, true)) {
-				if (THEME_DARK.equals(theme)) {
+				if (THEME_AUDINAUT.equals(theme)) {
+					return R.style.Theme_DSub_Audinaut_No_Actionbar;
+				} else if (THEME_DARK.equals(theme)) {
 					return R.style.Theme_DSub_Dark_No_Actionbar;
 				} else if (THEME_BLACK.equals(theme)) {
 					return R.style.Theme_DSub_Black_No_Actionbar;
@@ -71,7 +74,9 @@ public final class ThemeUtil {
 					return R.style.Theme_DSub_Light_No_Actionbar;
 				}
 			} else {
-				if (THEME_DARK.equals(theme)) {
+				if (THEME_AUDINAUT.equals(theme)) {
+					return R.style.Theme_DSub_Audinaut_No_Color;
+				} else if (THEME_DARK.equals(theme)) {
 					return R.style.Theme_DSub_Dark_No_Color;
 				} else if (THEME_BLACK.equals(theme)) {
 					return R.style.Theme_DSub_Black_No_Color;
@@ -82,7 +87,9 @@ public final class ThemeUtil {
 				}
 			}
 		} else {
-			if (THEME_DARK.equals(theme)) {
+			if (THEME_AUDINAUT.equals(theme)) {
+				return R.style.Theme_DSub_Audinaut;
+			} else if (THEME_DARK.equals(theme)) {
 				return R.style.Theme_DSub_Dark;
 			} else if (THEME_BLACK.equals(theme)) {
 				return R.style.Theme_DSub_Black;

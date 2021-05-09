@@ -303,6 +303,7 @@
     <string name="settings.invalid_username">Adjon meg egy érvényes felhasználónevet (szóközt nem tartalmazhat)!</string>
     <string name="settings.appearance_title">Megjelenés</string>
     <string name="settings.theme_title">Témák</string>
+	<string name="settings.theme_audinaut">Audinaut</string>
     <string name="settings.theme_light">Világos</string>
     <string name="settings.theme_dark">Sötét</string>
 	<string name="settings.theme_black">Fekete</string>
