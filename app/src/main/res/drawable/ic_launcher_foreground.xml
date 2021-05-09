@@ -112,16 +112,16 @@
                 <aapt:attr
                     name="android:fillColor">
                     <gradient
-                        android:startX="387.6964"
+                        android:startX="287.6964"
                         android:startY="771.4392"
-                        android:endX="389.097"
+                        android:endX="289.097"
                         android:endY="147.1536"
                         android:tileMode="clamp">
                         <item
-                            android:color="#267797"
+                            android:color="#800000"
                             android:offset="0" />
                         <item
-                            android:color="#A77797"
+                            android:color="#FFFFFF"
                             android:offset="1" />
                     </gradient>
                 </aapt:attr>
@@ -172,10 +172,10 @@
                     android:endY="379.1636"
                     android:tileMode="clamp">
                     <item
-                        android:color="#9FA5D4"
+                        android:color="#3F3F3F"
                         android:offset="0" />
                     <item
-                        android:color="#A2C6DB"
+                        android:color="#3F3F3F"
                         android:offset="1" />
                 </gradient>
             </aapt:attr>
