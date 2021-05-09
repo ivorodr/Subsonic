@@ -251,7 +251,8 @@
     <string name="settings.invalid_username">Por favor, especifique un usuario válido.</string>
     <string name="settings.appearance_title">Apariencia</string>
     <string name="settings.theme_title">Tema</string>
-    <string name="settings.theme_light">Claro</string>
+	<string name="settings.theme_audinaut">Audinaut</string>
+	<string name="settings.theme_light">Claro</string>
     <string name="settings.theme_dark">Oscuro</string>
 	<string name="settings.theme_black">Negro</string>
 	<string name="settings.theme_holo">Holo</string>

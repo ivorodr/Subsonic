@@ -285,6 +285,7 @@
     <string name="settings.invalid_username">Geef een valide gebruikersnaam op (geen volgspaties).</string>
     <string name="settings.appearance_title">Uiterlijk</string>
     <string name="settings.theme_title">Thema</string>
+	<string name="settings.theme_audinaut">Audinaut</string>
     <string name="settings.theme_light">Licht</string>
     <string name="settings.theme_dark">Donker</string>
 	<string name="settings.theme_black">Zwart</string>

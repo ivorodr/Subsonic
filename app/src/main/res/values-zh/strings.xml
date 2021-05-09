@@ -558,6 +558,7 @@
     <string name="settings.testing_ok">连接正常</string>
     <string name="settings.testing_unlicensed">连接正常但服务器未授权</string>
     <string name="settings.theme_black">黑色</string>
+    <string name="settings.theme_audinaut">Audinaut</string>
     <string name="settings.theme_dark">黑暗</string>
     <string name="settings.theme_day_black_night">白天/黑夜</string>
     <string name="settings.theme_day_night">白天/晚上</string>
