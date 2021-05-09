@@ -11,6 +11,6 @@
 	<dimen name="Card.TextLeftPadding">8dp</dimen>
 	<dimen name="Card.MarginsForShadow">2dp</dimen>
 	<dimen name="FastScroller.LeftAlignedMargin">6dp</dimen>
-	<dimen name="FastScroller.NormalBarMargin">4dp</dimen>
+	<dimen name="FastScroller.NormalBarMargin">0dp</dimen>
 	<dimen name="FastScroller.RightMargin">4dp</dimen>
 </resources>
