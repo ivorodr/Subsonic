@@ -745,7 +745,7 @@ public class SelectDirectoryFragment extends SubsonicFragment implements Section
 		// For Subsonic 5.1+ display a header for artists with getArtistInfo data if it exists
 		boolean addedHeader = false;
 		if(albumListType == null && (!artist || artistInfo != null || artistInfoDelayed != null) && (share == null || entries.size() != albums.size())) {
-			View header = createHeader();
+			View header = null;//createHeader();
 
 			if(header != null) {
 				if (artistInfoDelayed != null) {
