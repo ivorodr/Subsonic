@@ -54,64 +54,64 @@ public class ArtistAdapter extends SectionAdapter<Serializable> implements FastS
 		this.onItemClickedListener = onItemClickedListener;
 		this.onMusicFolderChanged = onMusicFolderChanged;
 
-		if(musicFolders != null) {
-			this.singleSectionHeader = true;
-		}
+//		if(musicFolders != null) {
+//			this.singleSectionHeader = true;
+//		}
 	}
 
-	@Override
-	public UpdateView.UpdateViewHolder onCreateHeaderHolder(ViewGroup parent) {
-		final View header = LayoutInflater.from(context).inflate(R.layout.select_artist_header, parent, false);
-		header.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				PopupMenu popup = new PopupMenu(context, header.findViewById(R.id.select_artist_folder_2));
-
-				popup.getMenu().add(R.string.select_artist_all_folders);
-				for (MusicFolder musicFolder : musicFolders) {
-					popup.getMenu().add(musicFolder.getName());
-				}
-
-				popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-					@Override
-					public boolean onMenuItemClick(MenuItem item) {
-						for (MusicFolder musicFolder : musicFolders) {
-							if(item.getTitle().equals(musicFolder.getName())) {
-								if(onMusicFolderChanged != null) {
-									onMusicFolderChanged.onMusicFolderChanged(musicFolder);
-								}
-								return true;
-							}
-						}
-
-						if(onMusicFolderChanged != null) {
-							onMusicFolderChanged.onMusicFolderChanged(null);
-						}
-						return true;
-					}
-				});
-				popup.show();
-			}
-		});
-
-		return new UpdateView.UpdateViewHolder(header, false);
-	}
-	@Override
-	public void onBindHeaderHolder(UpdateView.UpdateViewHolder holder, String header, int sectionIndex) {
-		TextView folderName = (TextView) holder.getView().findViewById(R.id.select_artist_folder_2);
-
-		String musicFolderId = Util.getSelectedMusicFolderId(context);
-		if(musicFolderId != null) {
-			for (MusicFolder musicFolder : musicFolders) {
-				if (musicFolder.getId().equals(musicFolderId)) {
-					folderName.setText(musicFolder.getName());
-					break;
-				}
-			}
-		} else {
-			folderName.setText(R.string.select_artist_all_folders);
-		}
-	}
+//	@Override
+//	public UpdateView.UpdateViewHolder onCreateHeaderHolder(ViewGroup parent) {
+//		final View header = LayoutInflater.from(context).inflate(R.layout.select_artist_header, parent, false);
+//		header.setOnClickListener(new View.OnClickListener() {
+//			@Override
+//			public void onClick(View v) {
+//				PopupMenu popup = new PopupMenu(context, header.findViewById(R.id.select_artist_folder_2));
+//
+//				popup.getMenu().add(R.string.select_artist_all_folders);
+//				for (MusicFolder musicFolder : musicFolders) {
+//					popup.getMenu().add(musicFolder.getName());
+//				}
+//
+//				popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//					@Override
+//					public boolean onMenuItemClick(MenuItem item) {
+//						for (MusicFolder musicFolder : musicFolders) {
+//							if(item.getTitle().equals(musicFolder.getName())) {
+//								if(onMusicFolderChanged != null) {
+//									onMusicFolderChanged.onMusicFolderChanged(musicFolder);
+//								}
+//								return true;
+//							}
+//						}
+//
+//						if(onMusicFolderChanged != null) {
+//							onMusicFolderChanged.onMusicFolderChanged(null);
+//						}
+//						return true;
+//					}
+//				});
+//				popup.show();
+//			}
+//		});
+//
+//		return new UpdateView.UpdateViewHolder(header, false);
+//	}
+//	@Override
+//	public void onBindHeaderHolder(UpdateView.UpdateViewHolder holder, String header, int sectionIndex) {
+//		TextView folderName = (TextView) holder.getView().findViewById(R.id.select_artist_folder_2);
+//
+//		String musicFolderId = Util.getSelectedMusicFolderId(context);
+//		if(musicFolderId != null) {
+//			for (MusicFolder musicFolder : musicFolders) {
+//				if (musicFolder.getId().equals(musicFolderId)) {
+//					folderName.setText(musicFolder.getName());
+//					break;
+//				}
+//			}
+//		} else {
+//			folderName.setText(R.string.select_artist_all_folders);
+//		}
+//	}
 
 	@Override
 	public UpdateView.UpdateViewHolder onCreateSectionViewHolder(ViewGroup parent, int viewType) {
