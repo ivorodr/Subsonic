@@ -221,9 +221,19 @@ public class ImageLoader {
 
 	public SilentBackgroundTask loadImage(View view, MusicDirectory.Entry entry, boolean large, boolean crossfade) {
 		int size = large ? imageSizeLarge : imageSizeDefault;
-		return loadImage(view, entry, large, size, crossfade);
+		return loadImage(view, entry, large, size, crossfade, false);
 	}
-	public SilentBackgroundTask loadImage(View view, MusicDirectory.Entry entry, boolean large, int size, boolean crossfade) {
+
+	public void loadBlurImage(View view, MusicDirectory.Entry entry, boolean large, boolean crossfade) {
+		int size = large ? imageSizeLarge : imageSizeDefault;
+		loadImage(view, entry, large, size, crossfade, true);
+	}
+
+	public void loadImage(View view, MusicDirectory.Entry entry, boolean large, int size, boolean crossfade) {
+		loadImage(view, entry, large, size, crossfade, false);
+	}
+
+	public SilentBackgroundTask loadImage(View view, MusicDirectory.Entry entry, boolean large, int size, boolean crossfade, boolean blur) {
 		if(entry != null && entry instanceof InternetRadioStation) {
 			// Continue on and load a null bitmap
 		}
@@ -243,12 +253,18 @@ public class ImageLoader {
 		Bitmap bitmap;
 		if (entry == null || entry.getCoverArt() == null) {
 			bitmap = getUnknownImage(entry, size);
+			if (blur) {
+				bitmap = BlurBuilder.blur(context, bitmap);
+			}
 			setImage(view, Util.createDrawableFromBitmap(context, bitmap), crossfade);
 			return null;
 		}
 
 		bitmap = cache.get(getKey(entry.getCoverArt(), size));
 		if (bitmap != null && !bitmap.isRecycled()) {
+			if (blur) {
+				bitmap = BlurBuilder.blur(context, bitmap);
+			}
 			final Drawable drawable = Util.createDrawableFromBitmap(this.context, bitmap);
 			setImage(view, drawable, crossfade);
 			if(large) {

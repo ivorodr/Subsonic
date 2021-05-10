@@ -70,6 +70,12 @@
 			android:summary="@string/settings.large_album_art_summary"
 			android:key="largeAlbumArt"
 			android:defaultValue="true"/>
+
+		<CheckBoxPreference
+			android:defaultValue="true"
+			android:key="blurredBackground"
+			android:summary="@string/settings.blurred_background_summary"
+			android:title="@string/settings.blurred_background" />
 	</PreferenceCategory>
 
 	<PreferenceCategory
