@@ -92,4 +92,8 @@
 		<item name="android:paddingRight">16dip</item>
 		<item name="android:paddingLeft">16dip</item>
 	</style>
+
+	<style name="SeekBar">
+		<item name="colorAccent">?android:textColorPrimary</item>
+	</style>
 </resources>
