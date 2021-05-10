@@ -102,6 +102,8 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 	private TextView emptyTextView;
 	private TextView songTitleTextView;
 	private ImageView albumArtImageView;
+	private View albumArtBackgroundView;
+	private ImageView albumArtBackgroundImageView;
 	private RecyclerView playlistView;
 	private TextView positionTextView;
 	private TextView durationTextView;
@@ -173,6 +175,8 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 		emptyTextView = (TextView)rootView.findViewById(R.id.download_empty);
 		songTitleTextView = (TextView)rootView.findViewById(R.id.download_song_title);
 		albumArtImageView = (ImageView)rootView.findViewById(R.id.download_album_art_image);
+		albumArtBackgroundView = rootView.findViewById(R.id.download_album_art_background);
+		albumArtBackgroundImageView = rootView.findViewById(R.id.download_album_art_background_image);
 		positionTextView = (TextView)rootView.findViewById(R.id.download_position);
 		durationTextView = (TextView)rootView.findViewById(R.id.download_duration);
 		statusTextView = (TextView)rootView.findViewById(R.id.download_status);
@@ -1259,7 +1263,7 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 		if (currentPlaying != null) {
 			Entry song = currentPlaying.getSong();
 			songTitleTextView.setText(song.getTitle());
-			getImageLoader().loadImage(albumArtImageView, song, true, true);
+			setAlbumArt(song, true);
 
 			DownloadService downloadService = getDownloadService();
 			if(downloadService.isCurrentPlayingSingle()) {
@@ -1273,7 +1277,7 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 			}
 		} else {
 			songTitleTextView.setText(null);
-			getImageLoader().loadImage(albumArtImageView, (Entry) null, true, false);
+			setAlbumArt(null, false);
 			setSubtitle(null);
 		}
 	}
@@ -1410,6 +1414,16 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 				stopButton.setVisibility(View.INVISIBLE);
 				startButton.setVisibility(View.VISIBLE);
 				break;
+		}
+	}
+
+	private void setAlbumArt(Entry song, Boolean crossfade) {
+		getImageLoader().loadImage(albumArtImageView, song, true, crossfade);
+		if (Util.getPreferences(context).getBoolean(Constants.PREFERENCES_KEY_BLURRED_BACKGROUND, true)) {
+			albumArtBackgroundView.setVisibility(ImageView.VISIBLE);
+			getImageLoader().loadBlurImage(albumArtBackgroundImageView, song, true, crossfade);
+		} else {
+			albumArtBackgroundView.setVisibility(ImageView.GONE);
 		}
 	}
 

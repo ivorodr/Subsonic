@@ -447,6 +447,8 @@
 	<string name="settings.menu_options.star_summary">Mostrar \"Marcar/Remover estrela\" nos menus</string>
 	<string name="settings.menu_options.shared_summary">Mostrar \"Partilhar\" nos menus</string>
 	<string name="settings.menu_options.rate_summary">Mostrar \"Classificar\" nos menus</string>
+	<string name="settings.blurred_background">Fundo desfocado</string>
+	<string name="settings.blurred_background_summary">Apresentar um fundo desfocado na capa de álbum na fila de reprodução</string>
 	<string name="settings.browse_by_tags">Navegar por etiquetas</string>
 	<string name="settings.browse_by_tags_summary">Navegar por etiquetas em vez da estrutura das pastas.  Requer Subsonic 4.7+</string>
 	<string name="settings.disable_exit_prompt">Desativar diálogo de saída</string>

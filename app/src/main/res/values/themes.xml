@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<style name="Theme.DSub.Light.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+		<item name="gradient">@drawable/light_gradient</item>
 		<item name="actionbar_element_color">@color/lightElement</item>
 		<item name="element_color">@color/lightElement</item>
 		<item name="offline_icon">@drawable/main_offline_light</item>
@@ -76,6 +77,7 @@
 	</style>
 	<style name="Theme.DSub.Audinaut.Base" parent="@style/Theme.AppCompat.Light.DarkActionBar">
 		<item name="android:windowLightStatusBar">true</item>
+		<item name="gradient">@drawable/light_gradient</item>
 		<item name="actionbar_element_color">@color/lightElement</item>
 		<item name="element_color">@color/lightElement</item>
 		<item name="offline_icon">@drawable/main_offline</item>
@@ -150,6 +152,7 @@
 		<item name="drawerHeaderBackground">@drawable/drawer_header_light</item>
 	</style>
 	<style name="Theme.DSub.Dark.Base" parent="@style/Theme.AppCompat">
+		<item name="gradient">@drawable/dark_gradient</item>
 		<item name="actionbar_element_color">@color/darkElement</item>
 		<item name="element_color">@color/darkElement</item>
 		<item name="offline_icon">@drawable/main_offline_dark</item>
