@@ -45,6 +45,7 @@ public class Updater {
 	}
 	
 	public void checkUpdates(Context context) {
+		/*
 		this.context = context;
 		List<Updater> updaters = new ArrayList<Updater>();
 		updaters.add(new UpdaterSongPress());
@@ -69,6 +70,7 @@ public class Updater {
 				}
 			}
 		}
+		*/
 	}
 	
 	public String getName() {
