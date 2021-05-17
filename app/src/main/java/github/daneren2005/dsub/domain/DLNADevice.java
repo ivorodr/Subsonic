@@ -18,15 +18,17 @@
 */
 
 package github.daneren2005.dsub.domain;
-
+/*
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import org.fourthline.cling.model.meta.Device;
+*/
 
 /**
  * Created by Scott on 11/1/2014.
  */
+/*
 public class DLNADevice implements Parcelable {
 	public Device renderer;
 	public String id;
@@ -76,3 +78,4 @@ public class DLNADevice implements Parcelable {
 		dest.writeInt(volumeMax);
 	}
 }
+*/

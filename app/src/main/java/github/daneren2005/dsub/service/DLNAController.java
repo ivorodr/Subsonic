@@ -14,7 +14,7 @@
 */
 
 package github.daneren2005.dsub.service;
-
+/*
 import android.content.SharedPreferences;
 import android.os.Looper;
 import android.util.Log;
@@ -630,3 +630,4 @@ public class DLNAController extends RemoteController {
 		}
 	}
 }
+*/
