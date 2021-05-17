@@ -1,5 +1,6 @@
 package github.daneren2005.dsub.util;
 
+/*
 import android.content.Context;
 import android.content.res.Resources;
 import android.view.View;
@@ -7,10 +8,12 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import com.shehabic.droppy.DroppyClickCallbackInterface;
 import com.shehabic.droppy.DroppyMenuCustomItem;
+*/
 
 /**
  * Created by marcus on 2/14/2017.
  */
+/*
 public class DroppySpeedControl extends DroppyMenuCustomItem {
 
     private Context context;
@@ -80,3 +83,4 @@ public class DroppySpeedControl extends DroppyMenuCustomItem {
         return this;
     }
 }
+*/

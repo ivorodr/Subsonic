@@ -55,9 +55,11 @@ import android.widget.PopupMenu;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
+/*
 import com.shehabic.droppy.DroppyClickCallbackInterface;
 import com.shehabic.droppy.DroppyMenuPopup;
 import com.shehabic.droppy.animations.DroppyFadeInAnimation;
+*/
 import github.daneren2005.dsub.R;
 import github.daneren2005.dsub.activity.SubsonicFragmentActivity;
 import github.daneren2005.dsub.adapter.SectionAdapter;
@@ -122,7 +124,9 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 	private ImageButton bookmarkButton;
 	private ImageButton rateBadButton;
 	private ImageButton rateGoodButton;
+	/*
 	private ImageButton playbackSpeedButton;
+	*/
 
 	private ScheduledExecutorService executorService;
 	private DownloadFile currentPlaying;
@@ -137,7 +141,9 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 	private int lastY = 0;
 	private int currentPlayingSize = 0;
 	private MenuItem timerMenu;
-    private DroppySpeedControl speed;
+    /*
+	private DroppySpeedControl speed;
+	*/
 
 	/**
 	 * Called when the activity is first created.
@@ -192,7 +198,9 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 		bookmarkButton = (ImageButton) rootView.findViewById(R.id.download_bookmark);
 		rateBadButton = (ImageButton) rootView.findViewById(R.id.download_rating_bad);
 		rateGoodButton = (ImageButton) rootView.findViewById(R.id.download_rating_good);
+		/*
 		playbackSpeedButton = (ImageButton) rootView.findViewById(R.id.download_playback_speed);
+		*/
 		toggleListButton =rootView.findViewById(R.id.download_toggle_list);
 
 		playlistView = (RecyclerView)rootView.findViewById(R.id.download_list);
@@ -227,7 +235,9 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 		bookmarkButton.setOnTouchListener(touchListener);
 		rateBadButton.setOnTouchListener(touchListener);
 		rateGoodButton.setOnTouchListener(touchListener);
+		/*
 		playbackSpeedButton.setOnTouchListener(touchListener);
+		*/
 		emptyTextView.setOnTouchListener(touchListener);
 		albumArtImageView.setOnTouchListener(new View.OnTouchListener() {
 			@Override
@@ -401,7 +411,9 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 		    setPlaybackSpeed();
 		} else {
+			/*
 			playbackSpeedButton.setVisibility(View.GONE);
+			*/
 		}
 
 		toggleListButton.setOnClickListener(new View.OnClickListener() {
@@ -496,11 +508,13 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 			menu.removeItem(R.id.menu_equalizer);
 		}
 
+		/*
 		if(Build.VERSION.SDK_INT < Build.VERSION_CODES.M || isRemoteEnabled) {
 			playbackSpeedButton.setVisibility(View.GONE);
 		} else {
 			playbackSpeedButton.setVisibility(View.VISIBLE);
 		}
+		*/
 
 		if(downloadService != null) {
 			MenuItem mediaRouteItem = menu.findItem(R.id.menu_mediaroute);
@@ -1538,7 +1552,8 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
 	}
 
 	private void setPlaybackSpeed() {
-        if (playbackSpeedButton.getVisibility() == View.GONE)
+        /*
+		if (playbackSpeedButton.getVisibility() == View.GONE)
             return;
         speed = new DroppySpeedControl(R.layout.set_playback_speed);
         DroppyMenuPopup.Builder builder = new DroppyMenuPopup.Builder(context,playbackSpeedButton);
@@ -1582,6 +1597,7 @@ public class NowPlayingFragment extends SubsonicFragment implements OnGestureLis
                 ,R.id.playback_speed_normal,R.id.playback_speed_one_half,R.id.playback_speed_double,
                 R.id.playback_speed_triple);
         speed.updateSeekBar(playbackSpeed);
+        */
 
     }
 	private void setPlaybackSpeed(float playbackSpeed) {
