@@ -17,7 +17,7 @@
 	Copyright 2014 (C) Scott Jackson
 */
 package github.daneren2005.dsub.provider;
-
+/*
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -452,3 +452,4 @@ public class DLNARouteProvider extends MediaRouteProvider {
 		}
 	}
 }
+*/

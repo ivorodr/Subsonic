@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import github.daneren2005.dsub.domain.RemoteControlState;
-import github.daneren2005.dsub.provider.DLNARouteProvider;
+//import github.daneren2005.dsub.provider.DLNARouteProvider;
 import github.daneren2005.dsub.provider.JukeboxRouteProvider;
 import github.daneren2005.dsub.service.DownloadService;
 import github.daneren2005.dsub.service.RemoteController;
@@ -44,7 +44,7 @@ public class MediaRouteManager extends MediaRouter.Callback {
 	private MediaRouteSelector selector;
 	private List<MediaRouteProvider> providers = new ArrayList<MediaRouteProvider>();
 	private List<MediaRouteProvider> onlineProviders = new ArrayList<MediaRouteProvider>();
-	private DLNARouteProvider dlnaProvider;
+	//private DLNARouteProvider dlnaProvider;
 
 	public MediaRouteManager(DownloadService downloadService) {
 		this.downloadService = downloadService;
@@ -153,25 +153,31 @@ public class MediaRouteManager extends MediaRouter.Callback {
 		if(castAvailable) {
 			builder.addControlCategory(GoogleCompat.getCastControlCategory());
 		}
+		/*
 		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
 			builder.addControlCategory(DLNARouteProvider.CATEGORY_DLNA);
 		}
+		*/
 		selector = builder.build();
 	}
 
 	public void addDLNAProvider() {
+		/*
 		if(dlnaProvider == null) {
 			dlnaProvider = new DLNARouteProvider(downloadService);
 			router.addProvider(dlnaProvider);
 			providers.add(dlnaProvider);
 		}
+		*/
 	}
 	public void removeDLNAProvider() {
+		/*
 		if(dlnaProvider != null) {
 			router.removeProvider(dlnaProvider);
 			providers.remove(dlnaProvider);
 			dlnaProvider.destroy();
 			dlnaProvider = null;
 		}
+		*/
 	}
 }
