@@ -20,9 +20,6 @@ buildscript {
 allprojects {
 	repositories {
 		jcenter()
-		maven {
-			url 'http://4thline.org/m2'
-		}
 		google()
 	}
 }
